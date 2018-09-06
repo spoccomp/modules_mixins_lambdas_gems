@@ -1,19 +1,26 @@
 module OsBehavior
-    #for windows
+    
     def boot_up
         @booted = true
-      end
+    end
     
-      def shut_down
+    def shut_down
         @booted = false
-      end
-    
-      def version_name
-        "Windows version: #{ @version } : #{ @codename }"
-      end
+    end
       
-      def load_command_prompt
+     #windows terminial 
+    def load_command_prompt
         'C:\> '
-      end
+    end
+
+    def version_name(version)
+        if(version == "win")
+            "Windows version: #{ @version } : #{ @codename }"
+        elsif(version == "mac")
+            "OSX version: #{ @version } : #{ @codename }"
+        elsif(version == "linux")
+            "Ubuntu version: #{ @version } : #{ @codename }"
+        end
+    end
      
 end

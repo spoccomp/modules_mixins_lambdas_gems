@@ -1,31 +1,6 @@
 module UnixBehavior
 
-
- def boot_up
-    @booted = true
- end
-    
- def shut_down
-     @booted = false
- end
-
-  def version_name
-    "OSX version: #{ @version } : #{ @codename }"
-  end
-
-  def load_terminal
+ def load_terminal
     "#{ @name }:~ $ "
   end
-  
-
-  def version_name
-    "Ubuntu version: #{ @version } : #{ @codename }"
-  end
-
-  def load_terminal
-    "#{ @name }:~ $ "
-  end
-
-
-
 end

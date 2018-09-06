@@ -18,6 +18,7 @@ class Windows
       @version = '10.13'
       @codename = 'high sierra'
     end
+    include OsBehavior
     include UnixBehavior  
   end
   
@@ -28,5 +29,6 @@ class Windows
       @version = '18.04'
       @codename = 'bionic beaver'
     end
+    include OsBehavior
     include UnixBehavior
   end
